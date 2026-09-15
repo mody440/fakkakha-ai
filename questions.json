@@ -1,0 +1,7 @@
+[
+  {"id":"math-01","subject":"Mathematics","topic":"Linear equations","grade":"middle-school","concept":"inverse operations","pre":"Solve 3x + 4 = 19.","transfer":"A number is multiplied by 3 and then increased by 4 to give 19. What is the number?"},
+  {"id":"math-02","subject":"Mathematics","topic":"Fractions","grade":"middle-school","concept":"common denominator","pre":"Compute 1/3 + 1/6.","transfer":"A recipe needs 1/3 cup plus 1/6 cup. How much is that altogether?"},
+  {"id":"science-01","subject":"Science","topic":"Forces","grade":"middle-school","concept":"net force","pre":"Two horizontal forces of 8 N right and 3 N left act on an object. What is the net force?","transfer":"A cart is pushed with 10 N east while friction is 4 N west. Find the net force and direction."},
+  {"id":"science-02","subject":"Science","topic":"States of matter","grade":"middle-school","concept":"particle motion","pre":"Why does a gas fill its container?","transfer":"Explain why perfume can eventually be noticed across a room after it is sprayed."},
+  {"id":"language-01","subject":"Language","topic":"Main idea","grade":"middle-school","concept":"central idea vs detail","pre":"Given a short paragraph, identify its central idea.","transfer":"Given a new paragraph on the same skill, identify the central idea and one supporting detail."}
+]

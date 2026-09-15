@@ -1,0 +1,24 @@
+{
+  "name": "fakkakha-ai",
+  "version": "1.0.0-competition",
+  "private": true,
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "dev": "vercel dev",
+    "test": "node --test tests/*.test.js",
+    "check": "node --check public/app.js && node --check public/lib/i18n.js && node --check public/push.js && node --check public/sw.js && node --check api/*.js lib/*.js",
+    "cap:add:android": "npx cap add android",
+    "cap:add:ios": "npx cap add ios",
+    "cap:sync": "npx cap sync"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0"
+  },
+  "devDependencies": {
+    "@capacitor/core": "^6.1.0",
+    "@capacitor/cli": "^6.1.0",
+    "@capacitor/android": "^6.1.0",
+    "@capacitor/ios": "^6.1.0",
+    "@capacitor/push-notifications": "^6.0.0"
+  }
+}

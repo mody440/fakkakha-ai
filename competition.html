@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fakkakha AI — Competition Edition</title>
+<meta name="description" content="Fakkakha AI: an AI learning coach that diagnoses misunderstanding, guides students Socratically, detects mistakes, and measures learning progress.">
+<meta property="og:title" content="Fakkakha AI — Competition Edition">
+<meta property="og:description" content="From answers to understanding: an AI learning coach built around diagnosis, guided reasoning, and measurable mastery.">
+<meta name="theme-color" content="#0A0D18">
+<link rel="stylesheet" href="/competition.css">
+</head>
+<body>
+<header class="nav wrap">
+  <a class="brand" href="/"><span class="logo">ف</span><span>Fakkakha AI</span></a>
+  <a class="nav-cta" href="/">Launch Demo ↗</a>
+</header>
+<main>
+<section class="hero wrap">
+  <div class="eyebrow">GLOBAL COMPETITION EDITION · AI FOR LEARNING</div>
+  <h1>Don’t give students the answer.<br><span>Teach them how to think.</span></h1>
+  <p class="hero-copy">Fakkakha AI is an adaptive learning coach that turns a student’s question or mistake into a guided learning session, identifies the underlying misconception, and tracks whether understanding actually improves.</p>
+  <div class="hero-actions"><a class="primary" href="/">Try the live experience</a><a class="secondary" href="#evidence">See the evidence plan</a></div>
+  <div class="proof-row"><div><b>5</b><span>core learning loops</span></div><div><b>3</b><span>AI roles</span></div><div><b>1</b><span>student model</span></div><div><b>0</b><span>AI keys in browser</span></div></div>
+</section>
+<section class="section wrap" id="problem">
+  <div class="section-kicker">01 · THE PROBLEM</div><div class="grid two"><div><h2>Most AI tutors optimize for <em>answers</em>.</h2><p>Students can receive a polished solution without exposing what they misunderstood. That creates a dangerous illusion of progress: the answer is correct, but the mental model is still wrong.</p></div><div class="quote-card"><div class="quote-mark">“</div><p>Correctness is not the same thing as learning.</p><small>Fakkakha’s design principle</small></div></div>
+</section>
+<section class="section dark-section" id="solution"><div class="wrap"><div class="section-kicker">02 · THE SOLUTION</div><h2>One loop. Four signals. Continuous adaptation.</h2><div class="loop"><div class="node"><b>ASK</b><span>Question / photo</span></div><div class="arrow">→</div><div class="node"><b>DIAGNOSE</b><span>Subject + topic + intent</span></div><div class="arrow">→</div><div class="node hot"><b>GUIDE</b><span>Socratic next step</span></div><div class="arrow">→</div><div class="node"><b>MEASURE</b><span>Verdict + mastery + mistake</span></div></div><div class="signals"><article><span>01</span><h3>Misconception</h3><p>Detects where reasoning first diverged instead of only marking the final answer wrong.</p></article><article><span>02</span><h3>Mastery</h3><p>Updates topic-level progress after each meaningful interaction.</p></article><article><span>03</span><h3>Pattern</h3><p>Aggregates repeated mistake categories and difficult topics.</p></article><article><span>04</span><h3>Evidence</h3><p>Exam Mode creates a measurable checkpoint rather than an endless chat.</p></article></div></div></section>
+<section class="section wrap" id="architecture"><div class="section-kicker">03 · SYSTEM DESIGN</div><div class="grid two"><div><h2>Built as a learning system, not a chatbot.</h2><p>The browser handles presentation and student interaction. Authenticated serverless APIs orchestrate AI calls. Supabase stores the student model under Row Level Security. The AI layer is validated before its output can change learning state.</p><ul class="checks"><li>Anonymous-first onboarding with optional account linking</li><li>Server-side Gemini access; no provider secret in the client</li><li>RLS-scoped student data and authenticated API requests</li><li>Strict payload limits, rate limits, safety settings and structured AI validation</li><li>Server-side exam scoring so answer keys are not exposed to students</li></ul></div><pre class="diagram">Student
+  │
+  ▼
+PWA / Capacitor
+  │  Auth token
+  ▼
+Vercel API ────────────────┐
+  │                        │
+  ├─ Diagnose              │
+  ├─ Socratic Session      ├──► Gemini
+  ├─ Mistake Detective     │    AI layer
+  ├─ Image Analysis        │
+  ├─ Exam Generate/Score   │
+  └─ Metrics               │
+  │
+  ▼
+Supabase
+  ├─ Profiles
+  ├─ Skills
+  ├─ Sessions / Messages
+  ├─ Mistakes
+  └─ Exam Sessions</pre></div></section>
+<section class="section dark-section" id="demo"><div class="wrap"><div class="section-kicker">04 · 90-SECOND JUDGE FLOW</div><h2>What a judge should see.</h2><div class="timeline"><div><b>0–15s</b><h3>Start</h3><p>Tap Demo Mode. No signup friction. A populated student model appears instantly.</p></div><div><b>15–40s</b><h3>Break a problem down</h3><p>Ask a question or use a sample mistake. Fakkakha asks for the next reasoning step instead of dumping a solution.</p></div><div><b>40–60s</b><h3>Expose the misconception</h3><p>Mistake Detective identifies the first wrong step, why it fails, and a targeted practice prompt.</p></div><div><b>60–90s</b><h3>Prove progress</h3><p>Open progress / mistake patterns, then run Exam Mode to show measurable outcomes.</p></div></div></div></section>
+<section class="section wrap" id="evidence"><div class="section-kicker">05 · EVIDENCE & BENCHMARK</div><div class="grid two"><div><h2>We do not claim “better AI” without measuring learning.</h2><p>The included benchmark protocol compares Fakkakha’s guided-learning flow against an answer-first baseline on the same question set. The primary outcome is learning gain, not response eloquence.</p><div class="metric-grid"><div><b>Learning gain</b><span>Pre-test → post-test</span></div><div><b>Transfer</b><span>Novel problem, same concept</span></div><div><b>Misconception repair</b><span>First-error correction rate</span></div><div><b>Efficiency</b><span>Time to independent solution</span></div></div></div><div class="scorecard"><h3>Judge scorecard</h3><div><span>Learning impact</span><b>40%</b></div><div><span>Technical quality</span><b>25%</b></div><div><span>Safety & privacy</span><b>15%</b></div><div><span>Innovation</span><b>10%</b></div><div><span>Demo clarity</span><b>10%</b></div><small>Weights are a proposed internal competition rubric, not a claim about any specific contest.</small></div></div></section>
+<section class="section wrap"><div class="section-kicker">06 · WHY IT CAN SCALE</div><div class="cards"><article><h3>Model routing</h3><p>Simple classification can use a faster model; complex teaching can use a stronger model.</p></article><article><h3>Cost controls</h3><p>Caching, input limits, rate limiting and bounded history reduce avoidable AI spend.</p></article><article><h3>Trust layer</h3><p>Structured output validation, safety settings, reporting and server-side state changes reduce failure modes.</p></article><article><h3>Device continuity</h3><p>Anonymous onboarding keeps friction low; optional email linking lets progress travel with the student.</p></article></div></section>
+<section class="final-cta wrap"><div><div class="section-kicker">THE THESIS</div><h2>AI should leave the student <span>more capable</span> than it found them.</h2><p>That is the metric Fakkakha is built around.</p></div><a class="primary" href="/">Launch Fakkakha ↗</a></section>
+</main>
+<footer class="wrap"><span>Fakkakha AI · Competition Edition</span><span>Technical details: see the repository docs and benchmark protocol.</span></footer>
+</body></html>
