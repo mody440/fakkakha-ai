@@ -4,8 +4,8 @@
    The Gemini key is NEVER referenced here — it only lives server-side in
    the /api functions, read from process.env.GEMINI_API_KEY.
    ========================================================================== */
-const SUPABASE_URL = "https://YOUR-PROJECT.supabase.co";
-const SUPABASE_ANON_KEY = "YOUR_ANON_KEY";
+const SUPABASE_URL = "https://hiweqvvgpterngjnlshq.supabase.co/rest/v1/";
+const SUPABASE_ANON_KEY = "sb_publishable_BhN1lo3i0tX8B0gUCQP00w_r6kbZ4oP";
 const API_BASE = ""; // same-origin on Vercel; leave empty
 
 // Loaded from /lib/i18n.js (plain <script>, before this module script) —
